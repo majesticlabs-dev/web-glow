@@ -1,0 +1,62 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS resource forks
+*._*
+
+# macOS folder settings
+.Spotlight-V100
+.Trashes
+
+# macOS temporary files
+*.swp
+*.swo
+*.tmp
+
+# macOS ._* files (metadata)
+._*
+
+# macOS autosave files
+*.sb-*
+
+# macOS lock files
+*.lock
+
+# Node modules (if applicable)
+node_modules/
+
+# Logs
+*.log
+
+# Compiled binary files
+*.o
+*.out
+*.exe
+
+# Editor configurations and caches
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ruby / Rails
+*.gem
+*.rbc
+.bundle/
+log/*
+tmp/*
+db/*.sqlite3
+db/*.sqlite3-journal
+public/system/*
+coverage/
+vendor/bundle
+*.rake_tasks~
+
+# Ignore byebug command history
+.byebug_history
+
+# Ignore other common IDE files
+*.iml
+*.ipr

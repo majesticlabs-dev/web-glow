@@ -1,0 +1,80 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  min-width: 240px; /* Slightly increased to accommodate button width */
+  text-align: center;
+}
+
+/* Container Styling */
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title Styling */
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.mode-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.btn {
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px; /* Add padding to buttons */
+  max-width: 200px; /* Limit button width */
+  width: 100%; /* Ensure button scales up to max-width */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+  margin: 0 auto; /* Center the button within the container */
+}
+
+/* Individual Button Colors */
+#lightBtn {
+  background-color: #4caf50; /* Green for Light Mode */
+}
+
+#lightBtn:hover {
+  background-color: #45a045;
+}
+
+#darkBtn {
+  background-color: #3f51b5; /* Blue for Dark Mode */
+}
+
+#darkBtn:hover {
+  background-color: #3949a3;
+}
+
+#offBtn {
+  background-color: #ff9800; /* Orange for Off Mode */
+}
+
+#offBtn:hover {
+  background-color: #e68900;
+}
+
+/* Current Mode Text */
+.current-mode {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #b3b3b3;
+}
