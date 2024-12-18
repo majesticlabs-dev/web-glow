@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const currentModeElement = document.getElementById("currentMode");
+  const options = document.querySelectorAll(".option");
 
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (tabs && tabs[0]) {
@@ -11,19 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
         (response) => {
           if (response && response.mode) {
             currentModeElement.textContent = response.mode;
+            setSelectedOption(response.mode);
           }
         }
       );
 
-      document
-        .getElementById("lightBtn")
-        .addEventListener("click", () => setMode("light"));
-      document
-        .getElementById("darkBtn")
-        .addEventListener("click", () => setMode("dark"));
-      document
-        .getElementById("offBtn")
-        .addEventListener("click", () => setMode("off"));
+      options.forEach((option) => {
+        option.addEventListener("click", () => {
+          const mode = option.id.replace("Btn", "");
+          setMode(mode);
+          setSelectedOption(mode);
+        });
+      });
 
       function setMode(mode) {
         chrome.runtime.sendMessage(
@@ -35,6 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           }
         );
+      }
+
+      function setSelectedOption(mode) {
+        options.forEach((option) => {
+          option.classList.toggle("selected", option.id === `${mode}Btn`);
+        });
       }
     }
   });

@@ -2,79 +2,76 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #121212;
-  color: #ffffff;
-  min-width: 240px; /* Slightly increased to accommodate button width */
+  font-family: "Inter", sans-serif;
+  background-color: #f8fafc;
+  color: #1f2937;
+  min-width: 240px;
   text-align: center;
 }
 
 /* Container Styling */
 .container {
-  padding: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(30, 41, 59);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Title Styling */
 .title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: rgb(203, 213, 225); /* Light color */
 }
 
-/* Button Styling */
+/* Mode Selector Styling */
 .mode-selector {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   width: 100%;
 }
 
-.btn {
-  color: #ffffff;
-  border: none;
-  padding: 12px 20px; /* Add padding to buttons */
-  max-width: 200px; /* Limit button width */
-  width: 100%; /* Ensure button scales up to max-width */
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 50px;
+/* Option Styling */
+.option {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
   cursor: pointer;
+  border-radius: 4px;
   transition: background-color 0.3s ease;
-  box-sizing: border-box;
-  margin: 0 auto; /* Center the button within the container */
+  color: rgb(203, 213, 225); /* Default text color */
 }
 
-/* Individual Button Colors */
-#lightBtn {
-  background-color: #4caf50; /* Green for Light Mode */
+.option.selected {
+  color: rgb(14, 165, 233); /* Selected text color */
 }
 
-#lightBtn:hover {
-  background-color: #45a045;
+.option .icon path {
+  stroke: rgb(148, 163, 184); /* Default icon color (stroke-slate-400) */
 }
 
-#darkBtn {
-  background-color: #3f51b5; /* Blue for Dark Mode */
+.option.selected .icon path {
+  stroke: rgb(14, 165, 233); /* Selected icon color */
 }
 
-#darkBtn:hover {
-  background-color: #3949a3;
+.option:hover {
+  background-color: #f8fafc; /* bg-slate-50 */
 }
 
-#offBtn {
-  background-color: #ff9800; /* Orange for Off Mode */
-}
-
-#offBtn:hover {
-  background-color: #e68900;
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
 
 /* Current Mode Text */
 .current-mode {
   font-size: 14px;
   margin-top: 20px;
-  color: #b3b3b3;
+  color: #6b7280;
 }
