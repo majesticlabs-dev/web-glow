@@ -8,7 +8,10 @@ function applyMode(mode) {
     styleElement = null;
   }
 
+  const htmlElement = document.documentElement;
+
   if (mode === "light") {
+    htmlElement.classList.remove("dark");
     styleElement = document.createElement("style");
     styleElement.textContent = `
       html, body {
@@ -22,6 +25,7 @@ function applyMode(mode) {
     `;
     document.documentElement.appendChild(styleElement);
   } else if (mode === "dark") {
+    htmlElement.classList.add("dark");
     styleElement = document.createElement("style");
     styleElement.textContent = `
       html, body {
